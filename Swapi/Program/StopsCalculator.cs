@@ -1,14 +1,16 @@
-﻿using Swapi.Interfaces;
+﻿#region Using
+using Swapi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+#endregion
 namespace Swapi.Program
 {
     public class StopsCalculator : IStopsCalculator
     {
+        #region Methods
         /// <summary>
         /// Calculates the number of stops for a starship
         /// Divides the distance parameter by, the maximum number of hours needed for a starship resuply multiplied by the MGLT
@@ -56,5 +58,6 @@ namespace Swapi.Program
                     return 0;
             }    
         }
+        #endregion
     }
 }

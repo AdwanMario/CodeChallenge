@@ -1,18 +1,23 @@
-﻿using Swapi.Interfaces;
+﻿#region Using
+using Swapi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+#endregion
 namespace Swapi.Models
 {
     public class StarShip: IStarship, IStarshipMeasures
     {
+        #region Constructors
         public StarShip()
         {
             this.consumptiondetail = new ConsumptionDetail();
         }
+        #endregion
+
+        #region Properties
         /// <summary>
         /// Name of the starship
         /// </summary>
@@ -106,5 +111,6 @@ namespace Swapi.Models
         /// Represents a converted field for MGLT, since MGLT coming from the API is string
         /// </summary>
         public long MGLTConverted { get; set; }
+        #endregion
     }
 }
